@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<% include header %>
+	</head>
+	</head>
+	<body>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2">
+		<% include nav %>
+		</div>
+		<% if (PinsUserName) { %>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2" style="margin-bottom: 20px">
+				<h1><%= PinsUserName %>'s Pins</h1>
+			</div>
+
+		<% } %>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2">
+			<div class="card-columns">
+				<% for (var i = 0; i < Pins.length; i++) { %>
+					<div class="card">
+						<img class="card-img-top img-responsive" src="<%= Pins[i].url %>" onerror="this.onerror=null; this.src='http://nemanjakovacevic.net/wp-content/uploads/2013/07/placeholder.png'" />
+						<div class="card-block">
+							<h4 class="card-title"><%= Pins[i].title %></h4>
+							<% if (user && (Pins[i].userId == user.id)) { %>
+								<a type="button" class="btn btn-danger" href="/pin/delete/<%= Pins[i].id %>">Delete</a>
+							<% } else { %>
+								<a href="/users/pins/<%= Pins[i].userId %>"><%= Pins[i].userName %></a>
+							<% } %>
+						</div>
+					</div>
+				<% } %>
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

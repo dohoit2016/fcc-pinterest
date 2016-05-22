@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	</head>
+	<body>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2">
+		<% include nav %>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2">
+			<div id="main" class="row-fluid">
+				<div class="pintech-form">
+					<form class="form-horizontal" method="post">
+						<fieldset>
+							<h4 class="text-center">Add new pin</h4>
+							<div class="form-group">
+								<label for="title" class="col-lg-2 control-label">Title</label>
+								<div class="col-lg-10">
+									<input class="form-control" name="title" type="text" placeholder="Title">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="pin-url" class="col-lg-2 control-label">Pin URL</label>
+								<div class="col-lg-10">
+									<input class="form-control" name="url" type="text" placeholder="Pin URL">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-10 col-lg-offset-2">
+									<button class="btn btn-primary" type="submit">Submit</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

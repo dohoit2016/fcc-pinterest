@@ -1,0 +1,10 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.card{
+	border: 1px solid #999;
+	border-radius: 20px;
+	background: #999;
+}
